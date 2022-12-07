@@ -1,0 +1,20 @@
+<h2>
+	歡迎光臨何敏煌的網站
+</h2>
+<hr>
+以下是所有感測器的資料：<br>
+<table width=800 border=1>
+	<tr><td>種類</td><td>地點</td><td>值</td><td>時間</td></tr>
+{% for item in data %}
+	<tr>
+		<td>{{item.name}}</td>
+		<td>{{item.place}}</td>
+		<td>{{item.value}}</td>
+		<td>{{item.rectime}}</td>
+	</tr>
+{% endfor %}
+</table>
+<hr>
+<a href="/">HOME</a>
+<a href="/lucky/">Lucky</a>
+<a href="/admin/">管理介面</a>
